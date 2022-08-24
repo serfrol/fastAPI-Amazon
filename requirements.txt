@@ -1,0 +1,11 @@
+fastapi
+pydantic
+uvicorn
+gunicorn
+numpy
+sklearn
+scipy
+python-multipart
+jinja2
+pandas
+aiofiles

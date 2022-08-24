@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample Form</title>
+</head>
+<body>
+<form method="post" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+    {{ form.name.label }} {{ form.name(size=20) }}
+    {{ form.file.label }} {{ form.name(size=20) }}
+    <input type="text" name="nums"/>
+    <input type="submit">
+</form>
+<form method="post" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+    {{ form.name.label }} {{ form.name(size=20) }}
+    {{ form.file.label }} {{ form.name(size=20) }}
+    <input type="file" name="file"/>
+    <input type="submit">
+</form>
+
+<p>{{ result }}</p>
+
+</body>
+</html>

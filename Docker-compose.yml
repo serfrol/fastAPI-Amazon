@@ -1,0 +1,30 @@
+# version: "3.8"
+# services:
+#   fast-api:
+#     build: .
+#     command: uvicorn hello:app
+#     environment: 
+#       - fastapi_APP=hello.py
+#     ports: 
+#       - "8000:8000"
+
+
+version: "3"
+
+services:
+  api:
+    build: ./
+    image: myimage
+    command: uvicorn main:app --reload --workers 4 --host 0.0.0.0 --port 8000
+    # environment:
+    #   - myimage_SERVICE__MODE="prod"
+    ports:
+      - 8000:8000
+    volumes:
+      - ./:/app
+    networks:
+      - test_network
+
+networks:
+  test_network:
+    driver: bridge
